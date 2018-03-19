@@ -1,4 +1,6 @@
 {
+    "name": "test git ",
+    "description": "test git tren travis",
     "autoload": {
         "classmap": [
             "src"
