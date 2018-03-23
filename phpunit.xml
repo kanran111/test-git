@@ -5,4 +5,9 @@ colors="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
 >
+<testsuites>
+  <testsuite name="huong dan test">
+    <directory>./tests/</directory>
+  </testsuite>
+</testsuites>>
 </phpunit>

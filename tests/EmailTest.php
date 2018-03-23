@@ -9,14 +9,14 @@ final class EmailTest extends TestCase
         $this->assertInstanceOf(
             Email::class,
             Email::fromString('user@example.com')
-        )
+        );
     }
 
     public function testToiTestChoi()
     {
         $this->expectException(InvalidArgumentException::class);
 
-        Email::fromString();
+        Email::fromString('valid');
     }
 
     public function testCanBeUsedAsString()
