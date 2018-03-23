@@ -16,7 +16,7 @@ final class EmailTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
-        Email::fromString('valid');
+        Email::fromString();
     }
 
     public function testCanBeUsedAsString()
