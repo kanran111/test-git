@@ -19,7 +19,7 @@ final class Email
 
     public function __toString(): string
     {
-        return $this->email;
+        return $this->email  
     }
 
     private function ensureIsValidEmail(string $email): void
