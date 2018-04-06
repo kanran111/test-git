@@ -14,6 +14,7 @@ final class Email
 
     public static function fromString(string $email): self
     {
+        some thing error
         return new self($email);
     }
 
