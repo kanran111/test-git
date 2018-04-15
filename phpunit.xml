@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="vendor/autoload.php"
-colors="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
->
-<testsuites>
+<phpunit bootstrap="vendor/autoload.php" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true">
   <testsuite name="huong dan test">
     <directory>./tests/</directory>
   </testsuite>
-</testsuites>>
+  <filter>
+    <whitelist addUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">./src</directory>
+      <file>./src/Email.php</file>
+    </whitelist>
+  </filter>
+  <logging>
+    <log type="coverage-html" target="./log/codeCoverage" charset="UTF-8" yui="true" highlight="true" lowUpperBound="50" highLowerBound="80"/>
+    <log type="testdox-html" target="./log/testdox.html" />
+  </logging>
 </phpunit>

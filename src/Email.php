@@ -5,33 +5,46 @@ final class Email
 {
     private $email;
 
-    private function __construct(string $email)
+    public function __construct()
     {
-        $this->ensureIsValidEmail($email);
-
-        $this->email = $email;
+        
     }
-
-    public static function fromString(string $email): self
-    {
-        some thing error
-        return new self($email);
-    }
-
-    public function __toString(): string
-    {
-        return $this->email;
-    }
-
-    private function ensureIsValidEmail(string $email): void
-    {
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new InvalidArgumentException(
-                sprintf(
-                    '"%s" is not a valid email address',
-                    $email
-                )
-            );
+    public function congHaiSo($a = 0,$b = 0){
+        if(!$this->testHaiSoPhaiLaSoKhong($a,$b)){
+            return false;
         }
+        return $a+$b;
+    }
+    // public function truHaiSo($a = 0, $b = 0){
+    //     if(!$this->testHaiSoPhaiLaSoKhong($a,$b)){
+    //         return false;
+    //     }
+    //     return $a-$b;
+    // }
+    // public function nhanHaiSo($a=0,$b=0){
+    //     if(!$this->testHaiSoPhaiLaSoKhong($a,$b)){
+    //         return false;
+    //     }
+    //     return $a*$b;
+    // }
+    // public function chiaHaiSo($a=0,$b=0){
+    //     if(!$this->testHaiSoPhaiLaSoKhong($a,$b)){
+    //         return false;
+    //     }
+    //     if( $b == 0  ){
+    //         echo 'mau so khong duoc khac 0 ';
+    //         return false;
+    //     }
+    //     return $a/$b;
+    // }
+    private function testHaiSoPhaiLaSoKhong($a = 0,$b = 0){
+        if( !is_numeric($a) || !is_numeric($b) ){
+            sprintf(
+                'a = "%s", b="%s" Khong phai la so',
+                $a,$b
+            );
+            return false;
+        }
+        return true;
     }
 }
