@@ -3,4 +3,4 @@ php:
   - '5.6'
   - '7.1'
 sudo: enable
-script: phpunit --testdox --converage-text
+script: phpunit
