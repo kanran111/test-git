@@ -10,7 +10,7 @@ final class Email
         
     }
     public function congHaiSo($a = 0,$b = 0){
-        if(!$this->testHaiSoPhaiLaSoKhong($a,$b)){
+        if(!$this->testHaiSoPhaiLaSoKhong($a,$b)){ // kiem tra 2 so co phai la
             return false;
         }
         return $a+$b;
